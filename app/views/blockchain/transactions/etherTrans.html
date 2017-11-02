@@ -1,0 +1,68 @@
+<body>
+<section class="profile-nav alt green-border ">
+  <section class="wrapper ">
+    <div ng-show="registerAccounts.length > 0">
+      <section class="panel col-lg-10 col-lg-offset-1">
+        <header class="panel-heading">
+          <h4>Ether Transaction</h4>
+        </header>
+        <br>
+        <div class="panel-body">
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label class="col-lg-2 control-label">From:</label>
+              <div class="col-lg-10">
+                <select class="form-control" ng-init="selectedAccountFrom = registerAccounts[0]"
+                        ng-model="selectedAccountFrom"
+                        ng-options="account.userName for account in registerAccounts ">
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-2 control-label">To:</label>
+              <div class="col-lg-10">
+                <select class="form-control " ng-init="selectedAccountTo = registerAccounts[0]" ng-model="selectedAccountTo"
+                        ng-options="account.userName for account in registerAccounts">
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-2 control-label">Balance</label>
+              <div class="col-lg-10">
+                <div class="input-group m-bot15">
+                  <input type="text" class="form-control" ng-model="ether">
+                  <span class="input-group-addon">Ether</span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-2 control-label">Data</label>
+              <div class="col-lg-10">
+                <input class="form-control" placeholder="data" ng-model="data">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-2 control-label">Password</label>
+              <div class="col-lg-10">
+                <input type="password" class="form-control" placeholder="Password" ng-model="password">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-lg-offset-2 col-lg-10">
+                <button type="submit" class="btn btn-danger"
+                        ng-click="chargeAccount(selectedAccountFrom.address,selectedAccountTo.address,password, ether, data)">Charge
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!--<div class="form-group">
+          <div class="col-lg-offset-2 col-lg-10">
+              <button type="submit" class="btn btn-danger col-lg-2" ng-click="getProvideData()">Show</button>
+          </div>
+      </div>-->
+    </div>
+  </section>
+</section>
+</body>

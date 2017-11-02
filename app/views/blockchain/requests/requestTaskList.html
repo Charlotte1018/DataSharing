@@ -1,0 +1,99 @@
+<body>
+<section class="profile-nav alt green-border ">
+  <section class="wrapper ">
+    <div>
+      <section class="panel col-lg-10 col-lg-offset-1">
+        <header class="panel-heading">
+          <h4>Request's Task List</h4>
+        </header>
+        <br>
+        <div class="panel-body">
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label class="col-lg-2 control-label">Select Request</label>
+              <div class="col-lg-10">
+                <select class="form-control m-bot15" ng-model="selectedAccount"
+                        ng-init="selectedAccount=registerAccounts[0]"
+                        ng-options="account.userName for account in registerAccounts">
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-lg-offset-2 col-lg-10">
+                <button type="submit" class="btn btn-danger col-lg-2"
+                        ng-click="getTaskRequestList(selectedAccount.address)">Show Task
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="panel col-lg-10 col-lg-offset-1">
+        <header class="panel-heading">
+          Task List
+        </header>
+        <table class="table table-striped border-top">
+          <thead>
+          <tr>
+            <th style="width:8px;"><input type="checkbox" class="group-checkable"/></th>
+            <th>Task Name</th>
+            <th class="hidden-phone">Provider</th>
+            <th class="hidden-phone">Remarks</th>
+            <th class="hidden-phone">Status</th>
+            <!--<th class="hidden-phone"></th>-->
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="odd gradeX" ng-repeat="task in taskSet">
+            <td><input type="checkbox" class="checkboxes" value="1"/></td>
+            <td>{{task.taskName}}</td>
+            <td class="hidden-phone">{{task.provider}}</td>
+            <td class="hidden-phone">{{task.information}}</td>
+            <td class="hidden-phone">{{task.status}}</td>
+          </tr>
+          </tbody>
+        </table>
+        <header class="panel-heading"></header>
+      </section>
+      <section class="panel col-lg-10 col-lg-offset-1">
+        <header class="panel-heading">
+          <h4>Modify Request's Remark</h4>
+        </header>
+        <br>
+        <div class="panel-body">
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label class="col-lg-2 control-label">Task Name</label>
+              <div class="col-lg-10">
+                <input type="text" id="taskName" class="form-control" placeholder="Task Name" ng-model="taskName">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-2 control-label">New Remarks</label>
+              <div class="col-lg-10">
+                <input type="text" id="information" class="form-control" placeholder="newremarks" ng-model="information">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-2 control-label">Password</label>
+              <div class="col-lg-10">
+                <input type="password" class="form-control" placeholder="password" ng-model="password">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-lg-offset-2 col-lg-10">
+                <button type="submit" class="btn btn-danger col-lg-2"
+                        ng-click="updateInfo(taskName, selectedAccount.address, password, information)">Modify
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+
+    </div>
+  </section>
+</section>
+</body>

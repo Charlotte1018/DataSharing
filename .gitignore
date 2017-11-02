@@ -1,0 +1,9 @@
+/node_modules
+/dist
+/.tmp
+/app/bower_components
+.idea
+.idea?
+/.idea
+.DS_store
+.DS_store?

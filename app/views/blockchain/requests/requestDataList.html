@@ -1,0 +1,109 @@
+<body>
+<section class="profile-nav alt green-border ">
+  <section class="wrapper ">
+    <div>
+      <section class="panel col-lg-10 col-lg-offset-1">
+        <header class="panel-heading">
+          <h4>Request's Data List</h4>
+        </header>
+        <br>
+        <div class="panel-body">
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label class="col-lg-2 control-label">Select Request</label>
+              <div class="col-lg-10">
+                <select class="form-control m-bot15" ng-model="selectedAccount"
+                        ng-init="selectedAccount=registerAccounts[0]"
+                        ng-options="account.userName for account in registerAccounts">
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-lg-offset-2 col-lg-10">
+                <button type="submit" class="btn btn-danger col-lg-2"
+                        ng-click="getRequestList(selectedAccount.address)">Search
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="panel col-lg-10 col-lg-offset-1">
+        <header class="panel-heading">
+          Data List
+        </header>
+        <table class="table table-striped border-top">
+          <thead>
+          <tr>
+            <th style="width:8px;"><input type="checkbox" class="group-checkable"/></th>
+            <th>Data Name</th>
+            <th class="hidden-phone">Provider</th>
+            <th class="hidden-phone">Remarks</th>
+            <th class="hidden-phone">Status</th>
+            <!--<th class="hidden-phone"></th>-->
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="odd gradeX" ng-repeat="data in dataSet">
+            <td><input type="checkbox" class="checkboxes" value="1"/></td>
+            <td>{{data.dataName}}</td>
+            <td class="hidden-phone">{{data.provider}}</td>
+            <td class="hidden-phone">{{data.information}}</td>
+            <td class="hidden-phone">{{data.status}}</td>
+          </tr>
+          </tbody>
+        </table>
+        <header class="panel-heading"></header>
+      </section>
+      <section class="panel col-lg-10 col-lg-offset-1">
+        <header class="panel-heading">
+          <h4>Modify Request's Remark</h4>
+        </header>
+        <br>
+        <div class="panel-body">
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label class="col-lg-2 control-label">Data Name</label>
+              <div class="col-lg-10">
+                <input type="text" id="dataName" class="form-control" placeholder="Data Name" ng-model="dataName"
+                       ng-change="isRequestLegal()">
+                <label for="dataName">{{nameError}}</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-2 control-label">Select Request</label>
+              <div class="col-lg-10">
+                <select class="form-control m-bot15" ng-model="selectedUpdateAccount"
+                        ng-init="selectedUpdateAccount=nodeRegisterAccounts[0]"
+                        ng-options="account.userName for account in nodeRegisterAccounts">
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-2 control-label">New Remarks</label>
+              <div class="col-lg-10">
+                <input type="text" id="dataName" class="form-control" placeholder="New Remarks" ng-model="information">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-2 control-label">Password</label>
+              <div class="col-lg-10">
+                <input type="text" id="dataName" class="form-control" placeholder="password" ng-model="password">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-lg-offset-2 col-lg-10">
+                <button type="submit" class="btn btn-danger col-lg-2"
+                        ng-click="updateInfo(dataName, selectedUpdateAccount.address, password, information)">Update
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+
+    </div>
+  </section>
+</section>
+</body>

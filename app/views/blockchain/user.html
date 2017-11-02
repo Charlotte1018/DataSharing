@@ -1,0 +1,101 @@
+<header class="header white-bg">
+  <a class="logo"><i class="fa fa-navicon"></i> &nbsp;Blockchain&nbsp;<span>DataSharing</span></a>
+  <div class="top-nav ">
+    <ul class="nav pull-right top-menu">
+      <li>
+        <input type="text" class="form-control search" placeholder="&nbsp; &nbsp;&nbsp;&nbsp;Search">
+      </li>
+      <li class="dropdown">
+        <a data-toggle="dropdown" class="dropdown-toggle">
+          <b class="fa fa-address-book"></b>
+        </a>
+        <ul class="dropdown-menu extended logout">
+          <div class="log-arrow-up"></div>
+          <li><a ui-sref="app2.register"><i class=" fa fa-suitcase"></i>Register</a></li>
+          <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+          <li><a href="#"><i class="fa fa-bell"></i> Notification</a></li>
+          <li><a ui-sref="app2.login"><i class="fa fa-key"></i> Log Out</a></li>
+          <!--<li><a ui-sref="app.login"><i class="fa fa-key"></i> Log Out</a></li>-->
+        </ul>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<aside id="sidebar" class="nav-collapse" toggle-menu>
+  <ul class="sidebar-menu">
+    <!--<li class="active">
+      <a ui-sref="app.home">
+          <i class="fa fa-home"></i><span>Home</span>
+      </a>
+    </li>-->
+    <li class="sub-menu">
+      <a>
+          <i class="fa fa-user"></i><span>Accounts</span><span class="arrow"></span>
+      </a>
+      <ul class="sub">
+        <li><a ui-sref="app1.accountsList">Account List</a></li>
+        <li><a ui-sref="app1.creatAccount">Create Accounts</a></li>
+        <li><a ui-sref="app1.getBalance">Get Balance</a></li>
+        <li><a ui-sref="app1.chargeAccount">Charge Account</a></li>
+        <li><a ui-sref="app1.registerAccounts">Register Accounts</a></li>
+        <li><a ui-sref="app1.registerAccountsList">Register Accounts List </a></li>
+      </ul>
+    </li>
+    <li class="sub-menu">
+      <a>
+          <i class="fa fa-database"></i><span> Provider</span><span class="arrow"></span>
+      </a>
+      <ul class="sub">
+        <li><a ui-sref="app1.provideData">Provide Data</a></li>
+        <li><a ui-sref="app1.provideDataList">Data List</a></li>
+        <li><a ui-sref="app1.provideTask">Provide Task</a></li>
+        <li><a ui-sref="app1.provideTaskList">Task List</a></li>
+      </ul>
+    </li>
+    <li class="sub-menu">
+      <a>
+          <i class="fa fa-upload"></i><span> Requester</span><span class="arrow"></span>
+      </a>
+      <ul class="sub">
+        <li><a ui-sref="app1.requestData">Requeste Data</a></li>
+        <li><a ui-sref="app1.requestDataList">Data List</a></li>
+        <li><a ui-sref="app1.requestTask">Requeste Task</a></li>
+        <li><a ui-sref="app1.requestTaskList">Task List</a></li>
+      </ul>
+    </li>
+    <li class="sub-menu">
+      <a><i class="fa fa-search"></i><span> Search</span><span class="arrow"></span>
+      </a>
+      <ul class="sub">
+        <li><a ui-sref="app1.dataList">Data List</a></li>
+        <li><a ui-sref="app1.searchData">Search Data</a></li>
+        <li><a ui-sref="app1.taskList">Task List</a></li>
+        <li><a ui-sref="app1.searchTask">Search Task</a></li>
+      </ul>
+    </li>
+    <li class="sub-menu">
+      <a><i class="fa fa-group"></i><span> Managements</span><span class="arrow"></span>
+      </a>
+      <ul class="sub">
+        <li><a ui-sref="app1.personalDataList">Personal Data List</a></li>
+        <li><a ui-sref="app1.personalDataControl">Provide Data control</a></li>
+        <li><a ui-sref="app1.personalTaskList">Personal Task List</a></li>
+        <li><a ui-sref="app1.personalTaskControl">Provide Task control</a></li>
+      </ul>
+    </li>
+    <!--<li>
+      <a ui-sref="app.login"><i class="fa fa-address-card-o"></i><span>Login Page</span>
+      </a>
+    </li>-->
+  </ul>
+</aside>
+
+<section id="main-content">
+  <div class="wrapper">
+     <div ui-view='content'></div>
+  </div>
+  <footer class="text-center">
+    <p>©️ 2017 BJUT-SSE 北工大区块链小组</p>
+  </footer>
+</section>

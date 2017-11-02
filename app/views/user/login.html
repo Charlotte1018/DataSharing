@@ -1,0 +1,33 @@
+<body class="login-body">
+    <div class=" text-right">
+        <button class="btn  btn-primary " ng-click="User()">User</button>&nbsp;
+        <button class="btn  btn-primary " ng-click="Administrator()">Administrator</button>
+
+    </div>
+
+    <form class="form-signin  " id="User" ng-show="toggle">
+        <h2 class="form-signin-heading">User</h2>
+        <div class="login-wrap">
+            <input type="text" class="form-control" placeholder="User ID" autofocus>
+            <input type="password" class="form-control" placeholder="Password">
+            <label class="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" value="remember-me"> Remember me
+                <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
+                </label><br>
+            <button class="btn btn-lg btn-login btn-block" type="submit" ui-sref='app1.accountsList'>Sign in</button>
+        </div>
+    </form>
+    <form class="form-signin  tab-pane" id="Administrator" ng-hide="toggle">
+        <h2 class="form-signin-heading">Administrator</h2>
+        <div class="login-wrap">
+            <input type="text" class="form-control" placeholder="Administrator ID" autofocus>
+            <input type="password" class="form-control" placeholder="Password">
+            <label class="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" value="remember-me"> Remember me
+                <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
+                </label><br>
+            <button class="btn btn-lg btn-login btn-block" type="submit" ui-sref='app.home'>Sign in</button>
+        </div>
+    </form>
+    </div>
+</body>
