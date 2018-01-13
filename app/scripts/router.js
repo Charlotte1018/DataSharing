@@ -277,5 +277,14 @@ angular.module('mainrouter', [
             controller: 'login'
           }
         }
+      })
+      .state('app.ipfs', {
+        url: '/ipfs',
+        views: {
+          "content": {
+            templateUrl: 'views/blockchain/ipfsFile/ipfs.html',
+            controller: 'login'
+          }
+        }
       });
   });

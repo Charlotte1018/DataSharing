@@ -64,7 +64,11 @@ body {
   .container {
     max-width: 730px;
   }
-
+  .ipfs {
+    width: calc(100%);
+    height: calc(100vh - 120px);
+    /* height: 800px; */
+  }
   /* Remove the padding we set earlier */
   .header,
   .marketing,
