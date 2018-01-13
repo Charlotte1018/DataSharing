@@ -8,6 +8,11 @@
 body {
   padding: 0;
 }
+.ipfs {
+  width: calc(100%);
+  height: calc(100vh - 120px);
+  /* height: 800px; */
+}
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,

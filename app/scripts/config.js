@@ -4,6 +4,7 @@ var Web3 = require('web3');
 var nodeAddress = "http://localhost:8545";
 var web3 = new Web3(Web3.providers.givenProvider || new Web3.providers.HttpProvider(nodeAddress));
 //初始化
+console.error(web3.eth.accounts[0]);
 var auth = true;
 /**
  * 管理合约
@@ -59,7 +60,7 @@ var auth = true;
  * setDataCapability(bytes32 dataName, bytes32 cap_pwd, string cap) —— 根据数据名称、权限密码和新权限字段设置权限，返回是否成功(bool)
  */
 
-var contractAddress = "0x7D575ac9a76761256De8cb498c2eF286cDCAb409";
+var contractAddress = "0x6894e311521E125dF790885dA16751aA558531cD";
 
 var abi = [{
   "constant": false,
