@@ -4,6 +4,7 @@ var Web3 = require('web3');
 var nodeAddress = "http://localhost:8545";
 var web3 = new Web3(Web3.providers.givenProvider || new Web3.providers.HttpProvider(nodeAddress));
 //初始化
+console.error(web3.eth.accounts[0]);
 var auth = true;
 /**
  * 管理合约
