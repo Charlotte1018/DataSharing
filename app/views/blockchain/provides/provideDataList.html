@@ -49,7 +49,8 @@
             <td class="hidden-phone"><p ng-repeat="type in data.types">{{type.key}}
               => {{type.value}}</p></td>
             <td class="hidden-phone">{{data.introduction}}</td>
-            <td class="hidden-phone"><a href="http://ipfs.io/ipfs/QmbdvonttJ7BkcPp4WZGjpUX7aq5XYGyGKuQmvQa2K1Nkq" class="btn btn-success btn-xs">Details</a></td>
+            <td class="hidden-phone"><a href="{{data.introduction}}" target="_blank" class="btn btn-success btn-xs">Details</a></td>
+            <!-- <td class="hidden-phone"><a href="http://ipfs.io/ipfs/QmbdvonttJ7BkcPp4WZGjpUX7aq5XYGyGKuQmvQa2K1Nkq" class="btn btn-success btn-xs">Details</a></td> -->
           </tr>
           </tbody>
         </table>

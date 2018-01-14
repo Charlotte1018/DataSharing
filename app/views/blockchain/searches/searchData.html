@@ -30,7 +30,7 @@
                     <th style="width:8px;"><input type="checkbox" class="group-checkable"/></th>
                     <th>Data Name</th>
                     <th class="hidden-phone">Type List</th>
-                    <th class="hidden-phone">Introduction</th>
+                    <th class="hidden-phone">IPFS</th>
                     <th class="hidden-phone">Provider</th>
                   </tr>
                   </thead>
@@ -41,7 +41,7 @@
                     <td class="hidden-phone">
                       <p ng-repeat="type in data.types">{{type.key}}=>{{type.value}}</p>
                     </td>
-                    <td class="hidden-phone">{{data.introduction}}</td>
+                    <td class="hidden-phone"><a href="{{data.introduction}}" target="_blank" class="btn btn-success btn-xs">Details</a></td>
                     <td class="hidden-phone">{{data.provider}}</td>
                   </tr>
                   </tbody>
